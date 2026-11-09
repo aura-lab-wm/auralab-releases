@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="How AuraLab works: on your Mac, Claude Code reaches the lab GPU server rocco through a local gateway, a switch shim and an SSH tunnel, and DeepSeek Harness through the shim and the tunnel; AuraLab in the menu bar keeps them running and installs signed updates.">
+<defs>
+<marker id="aGold" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#B9975B"/></marker>
+<marker id="aGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#115740"/></marker>
+<marker id="aMuted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#595959"/></marker>
+<marker id="aClaude" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#D97757"/></marker>
+<marker id="aDsh" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#3E5BE0"/></marker>
+<filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0B3D2D" flood-opacity=".12"/></filter>
+</defs>
+<rect x="1" y="1" width="1198" height="598" rx="18" fill="#FCFBF8" stroke="#D8D3C4" stroke-width="1.5"/>
+<rect x="28" y="28" width="800" height="544" rx="16" fill="#F7F0E1"/>
+<text x="52" y="60" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#7E6229" text-anchor="start" letter-spacing="2">YOUR MAC</text>
+<g filter="url(#sh)">
+<rect x="52" y="150" width="210" height="92" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+</g>
+<circle cx="80" cy="182" r="9" fill="#D97757"/>
+<text x="98" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#191919" text-anchor="start">Claude Code</text>
+<text x="72" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">in a terminal</text>
+<g filter="url(#sh)">
+<rect x="52" y="290" width="210" height="92" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+</g>
+<circle cx="80" cy="322" r="9" fill="#4D6BFE"/>
+<text x="98" y="327" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#191919" text-anchor="start">DeepSeek Harness</text>
+<text x="72" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">in your browser · :3080</text>
+<rect x="300" y="116" width="504" height="292" rx="16" fill="none" stroke="#115740" stroke-width="1.5" stroke-dasharray="7 6"/>
+<text x="322" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0B3D2D" text-anchor="start">Background services · start with your Mac</text>
+<g filter="url(#sh)">
+<rect x="322" y="196" width="142" height="118" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+</g>
+<rect x="322" y="196" width="142" height="6" rx="3" fill="#115740"/>
+<text x="393" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#191919" text-anchor="middle">Gateway</text>
+<text x="393" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="middle">LiteLLM</text>
+<text x="393" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="500" fill="#7E6229" text-anchor="middle">127.0.0.1:4000</text>
+<g filter="url(#sh)">
+<rect x="482" y="196" width="142" height="118" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+</g>
+<rect x="482" y="196" width="142" height="6" rx="3" fill="#115740"/>
+<text x="553" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#191919" text-anchor="middle">Switch shim</text>
+<text x="553" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="middle">picks the model</text>
+<text x="553" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="500" fill="#7E6229" text-anchor="middle">127.0.0.1:4010</text>
+<g filter="url(#sh)">
+<rect x="642" y="196" width="142" height="118" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+</g>
+<rect x="642" y="196" width="142" height="6" rx="3" fill="#1F6B7A"/>
+<text x="713" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#191919" text-anchor="middle">SSH tunnel</text>
+<text x="713" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="middle">signs in as you</text>
+<text x="713" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="500" fill="#7E6229" text-anchor="middle">127.0.0.1:8000</text>
+<path d="M 466 255 L 478 255" fill="none" stroke="#115740" stroke-width="2.2" stroke-linecap="round" marker-end="url(#aGreen)"/>
+<path d="M 626 255 L 638 255" fill="none" stroke="#115740" stroke-width="2.2" stroke-linecap="round" marker-end="url(#aGreen)"/>
+<path d="M 262 196 C 285 196 290 250 318 255" fill="none" stroke="#D97757" stroke-width="2.2" stroke-linecap="round" marker-end="url(#aClaude)"/>
+<path d="M 262 336 C 420 340 553 372 553 318" fill="none" stroke="#3E5BE0" stroke-width="2.2" stroke-linecap="round" marker-end="url(#aDsh)"/>
+<text x="322" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" fill="#115740" text-anchor="start">rocco models: Claude Code enters at the gateway, DSH at the shim</text>
+<path d="M 157 150 L 157 96 L 868 96" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#aClaude)"/>
+<text x="300" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#D97757" text-anchor="start">Claude models: your own Claude account</text>
+<g filter="url(#sh)">
+<rect x="52" y="438" width="752" height="108" rx="14" fill="#0B3D2D"/>
+</g>
+<rect x="52" y="438" width="752" height="5" rx="2" fill="#B9975B"/>
+<text x="80" y="478" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="600" fill="#FFFFFF" text-anchor="start">AuraLab</text>
+<text x="80" y="506" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#DCE8E1" text-anchor="start">in the menu bar: sets everything up once, checks it, restarts it,</text>
+<text x="80" y="526" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#DCE8E1" text-anchor="start">and opens your client every day</text>
+<text x="782" y="480" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" fill="#E9C77B" text-anchor="end">status · open · copy key</text>
+<text x="782" y="502" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" fill="#E9C77B" text-anchor="end">restart · update</text>
+<path d="M 552 438 L 552 412" fill="none" stroke="#B9975B" stroke-width="1.8" stroke-dasharray="3 5" stroke-linecap="round" marker-end="url(#aGold)"/>
+<rect x="868" y="64" width="304" height="64" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+<circle cx="896" cy="96" r="8" fill="#D97757"/>
+<text x="914" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#191919" text-anchor="start">Anthropic</text>
+<text x="914" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="start">Claude, signed in as you</text>
+<g filter="url(#sh)">
+<rect x="868" y="176" width="304" height="158" rx="16" fill="#115740"/>
+</g>
+<rect x="868" y="176" width="304" height="6" rx="3" fill="#1F6B7A"/>
+<text x="896" y="222" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="start">rocco</text>
+<text x="896" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#DCE8E1" text-anchor="start">the AURA Lab GPU server</text>
+<rect x="896" y="270" width="54" height="40" rx="7" fill="#0B3D2D" stroke="#7FC4D1" stroke-width="1.2"/>
+<text x="923" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#9FD6E0" text-anchor="middle">L40S</text>
+<rect x="960" y="270" width="54" height="40" rx="7" fill="#0B3D2D" stroke="#7FC4D1" stroke-width="1.2"/>
+<text x="987" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#9FD6E0" text-anchor="middle">L40S</text>
+<rect x="1024" y="270" width="54" height="40" rx="7" fill="#0B3D2D" stroke="#7FC4D1" stroke-width="1.2"/>
+<text x="1051" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#9FD6E0" text-anchor="middle">L40S</text>
+<rect x="1088" y="270" width="54" height="40" rx="7" fill="#0B3D2D" stroke="#7FC4D1" stroke-width="1.2"/>
+<text x="1115" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#9FD6E0" text-anchor="middle">L40S</text>
+<path d="M 784 255 L 864 255" fill="none" stroke="#B9975B" stroke-width="2.6" stroke-linecap="round" marker-end="url(#aGold)"/>
+<rect x="806" y="236" width="38" height="38" rx="10" fill="#FCFBF8" stroke="#B9975B" stroke-width="1.5"/>
+<path d="M818 252 v-4 a7 7 0 0 1 14 0 v4" fill="none" stroke="#0B3D2D" stroke-width="2"/><rect x="815" y="252" width="20" height="14" rx="3" fill="#0B3D2D"/>
+<rect x="868" y="438" width="304" height="108" rx="14" fill="#FFFFFF" stroke="#D8D3C4" stroke-width="1.2"/>
+<text x="892" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#191919" text-anchor="start">Updates</text>
+<text x="892" y="492" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" fill="#7E6229" text-anchor="start">aura-lab-wm/auralab-releases</text>
+<text x="892" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="start">signed; AuraLab refuses an</text>
+<text x="892" y="534" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#595959" text-anchor="start">update whose signature fails</text>
+<path d="M 868 492 L 808 492" fill="none" stroke="#B9975B" stroke-width="1.8" stroke-dasharray="3 5" stroke-linecap="round" marker-end="url(#aGold)"/>
+</svg>
