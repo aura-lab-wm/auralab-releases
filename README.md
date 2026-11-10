@@ -140,6 +140,10 @@ account. All three services start with your Mac.
 AuraLab checks this repository's latest release and offers a new version in the menu bar. Every update is signed, and
 AuraLab refuses one whose signature does not match.
 
+Click **Install update**. AuraLab restarts and brings its background services (the gateway and the switch shim) up to
+the new version on its own, then shows a notification. Your SSH key, your logins and your settings stay as they are. If
+that step fails, the menu bar shows **Finish update**: click it to run the step again.
+
 ## Questions
 
 <details>
