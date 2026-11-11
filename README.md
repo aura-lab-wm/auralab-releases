@@ -84,13 +84,15 @@ Keyboard: **Enter** takes the page's main action (Continue, Install, Retry), **E
 
 <table>
   <tr>
-    <td width="42%" align="center"><img src="assets/screens/6-menubar.png" alt="The AuraLab menu: server, gateway, shim, tunnel and DSH status, the last model, and actions" width="320"></td>
+    <td width="42%" align="center"><img src="assets/screens/6-menubar.png" alt="The AuraLab menu: gateway, shim, tunnel and DSH up; the model loaded on rocco; four GPU cards showing who holds each one; actions; the version and Check now" width="320"></td>
     <td width="58%" valign="top">
       <p>Click the AuraLab icon in the menu bar to see:</p>
       <ul>
-        <li>whether the <b>gateway</b>, the <b>shim</b>, the <b>tunnel</b> to rocco and <b>DSH</b> are up;</li>
-        <li>the model that last ran on rocco;</li>
-        <li><b>Open Claude Code</b>, <b>Open DSH</b>, <b>Copy SSH key</b>, <b>Restart services</b>, and <b>Install update</b> when one is available.</li>
+        <li>whether the <b>gateway</b>, the <b>shim</b>, the <b>tunnel</b> to rocco and <b>DSH</b> are up, with a <b>Restart</b> button on any that is down;</li>
+        <li>the <b>model</b> loaded on rocco, or why none is (no GPU free, or it loads on your first request);</li>
+        <li>rocco's four <b>GPUs</b>: how much memory each one uses and who holds it, with a standing grant or a lease, or <b>free</b>;</li>
+        <li><b>Open Claude Code</b>, <b>Open DSH</b>, <b>Switch model…</b>, <b>Copy SSH key</b>, <b>Restart services</b>, <b>Copy diagnostics</b>, and <b>Install update</b> when one is available;</li>
+        <li>your AuraLab version, when it last looked for updates, and <b>Check now</b>.</li>
       </ul>
       <p>With both clients installed, AuraLab asks which one to open and remembers your answer:</p>
       <img src="assets/screens/5-chooser.png" alt="Which client to open today: Claude Code or DeepSeek Harness, with Remember my choice" width="100%">
@@ -98,11 +100,34 @@ Keyboard: **Enter** takes the page's main action (Continue, Install, Retry), **E
   </tr>
 </table>
 
+### Switch the model
+
+<table>
+  <tr>
+    <td width="42%" align="center"><img src="assets/screens/7-switch.png" alt="Switch model: the list of rocco's models, and rocco's answer that the loaded model is in use by someone else until 14:52 UTC, with Tell me when a GPU is free" width="320"></td>
+    <td width="58%" valign="top">
+      <p><b>Switch model…</b> lists the models rocco can load. Click one to ask rocco to load it. The lab's rules
+      decide, the same as <code>rocco-switch</code> on the server:</p>
+      <ul>
+        <li>a model someone else used in the last 10 minutes stays loaded;</li>
+        <li>the model needs enough free GPUs;</li>
+        <li>each account can switch 6 times an hour.</li>
+      </ul>
+      <p>When rocco says no, the menu shows its reason, word for word. If a GPU is all you are waiting for, click
+      <b>Tell me when a GPU is free</b>: AuraLab checks every minute, for up to 4 hours, and sends one notification.</p>
+    </td>
+  </tr>
+</table>
+
 The same from Terminal:
 
 ```sh
-auralab status                 # what the menu shows
+auralab status                 # gateway, shim, tunnel and DSH
+auralab gpus                   # the model on rocco and who holds each GPU
+auralab models                 # the models rocco can load
+auralab switch rocco-glm       # ask rocco to load one (it says why if it cannot)
 auralab key                    # print your SSH public key again
+auralab diagnostics            # a report for your instructor (keys and your home folder removed)
 auralab launch --client dsh    # open DeepSeek Harness
 ```
 
@@ -137,10 +162,11 @@ account. All three services start with your Mac.
 
 ## Updates
 
-AuraLab checks this repository's latest release and offers a new version in the menu bar. Every update is signed, and
-AuraLab refuses one whose signature does not match.
+AuraLab checks this repository's latest release when you log in and every 12 hours, and **Check now** at the bottom of
+the menu checks at once. When a new version is out, a notification says so, once per version: click it, or the
+AuraLab icon, to open the menu. Every update is signed, and AuraLab refuses one whose signature does not match.
 
-Click **Install update**. AuraLab restarts and brings its background services (the gateway and the switch shim) up to
+Click **Install update**: the menu shows the download and the install as they happen. AuraLab restarts and brings its background services (the gateway and the switch shim) up to
 the new version on its own, then shows a notification. Your SSH key, your logins and your settings stay as they are. If
 that step fails, the menu bar shows **Finish update**: click it to run the step again.
 
@@ -165,6 +191,14 @@ The tunnel connects once your instructor has added your SSH key to your account 
 
 The page names the step and shows the error. Click **Copy details** and send the text to your instructor, or click
 **Retry**. The logs are in `~/.config/rocco/logs`. If step 1 stopped, nothing was changed on your Mac.
+</details>
+
+<details>
+<summary><b>Something does not work</b></summary>
+
+Menu bar → **Copy diagnostics**, and paste the text in a message to your instructor. It holds AuraLab's version, the
+checks, rocco's GPUs and the end of each log, with keys, tokens and your home folder removed. AuraLab sends it nowhere
+itself. `auralab diagnostics` prints the same.
 </details>
 
 <details>
