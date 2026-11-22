@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/aura-lab-wm/auralab-releases/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/aura-lab-wm/auralab-releases?label=latest&color=115740"></a>
-  <img alt="macOS 12 or later" src="https://img.shields.io/badge/macOS-12%2B-0B3D2D">
+  <img alt="macOS 13.1 or later" src="https://img.shields.io/badge/macOS-13.1%2B-0B3D2D">
   <img alt="Apple Silicon and Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-universal-B9975B">
   <img alt="Signed updates" src="https://img.shields.io/badge/updates-signed-1F6B7A">
 </p>
@@ -45,7 +45,7 @@ This repository holds only the downloads and the update feed. The source code is
 
 ## Install
 
-macOS 12 or later, Apple Silicon or Intel.
+macOS 13.1 or later, Apple Silicon or Intel. DeepSeek Harness needs macOS 13.5 or later.
 
 1. Download the `.dmg` from the [latest release](https://github.com/aura-lab-wm/auralab-releases/releases/latest).
 2. Open it and drag **AuraLab** to **Applications**.
