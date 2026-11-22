@@ -48,9 +48,9 @@ This repository holds only the downloads and the update feed. The source code is
 macOS 12 or later, Apple Silicon or Intel.
 
 1. Download the `.dmg` from the [latest release](https://github.com/aura-lab-wm/auralab-releases/releases/latest).
-2. Open it and drag **AuraLab v1** to **Applications**.
-3. Open **AuraLab v1** from Applications. This build is not notarized by Apple yet, so macOS blocks the first open:
-   go to **System Settings → Privacy & Security**, find the line about AuraLab v1 and click **Open Anyway**. You do this once.
+2. Open it and drag **AuraLab** to **Applications**.
+3. Open **AuraLab** from Applications. This build is not notarized by Apple yet, so macOS blocks the first open:
+   go to **System Settings → Privacy & Security**, find the line about AuraLab and click **Open Anyway**. You do this once.
 4. Follow the four pages of the setup (below). Your instructor gives you your username and the server address.
 
 > [!NOTE]
@@ -175,7 +175,7 @@ that step fails, the menu bar shows **Finish update**: click it to run the step 
 <details>
 <summary><b>macOS says AuraLab cannot be opened</b></summary>
 
-This build is not notarized yet. Go to **System Settings → Privacy & Security**, find the line about AuraLab v1 and click
+This build is not notarized yet. Go to **System Settings → Privacy & Security**, find the line about AuraLab and click
 **Open Anyway**. You do this once.
 </details>
 
@@ -212,10 +212,14 @@ Menu bar → **Copy SSH key**, or run `auralab key`.
 In Terminal:
 
 ```sh
-"/Applications/AuraLab v1.app/Contents/MacOS/auralab-app" uninstall
+~/.local/bin/auralab uninstall
 ```
 
-then drag AuraLab v1 from Applications to the Trash. The uninstall stops and removes the background services and the
+(If setup never finished, that link is missing: run `"/Applications/AuraLab.app/Contents/MacOS/auralab-app" uninstall`
+instead. A Mac that installed AuraLab before version 0.1.22 keeps the app as **AuraLab v1** in Applications, so use
+`"/Applications/AuraLab v1.app/Contents/MacOS/auralab-app" uninstall` there.)
+
+Then drag AuraLab from Applications to the Trash. The uninstall stops and removes the background services and the
 gateway. It leaves your SSH key and the `Host` block in `~/.ssh/config`, Claude Code, DeepSeek Harness and your logins.
 Open a new terminal afterwards so the shell forgets the `claude` wrapper.
 
